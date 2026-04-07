@@ -3,7 +3,7 @@ public class Queues {
     private int front;
     private int rear;
     private int size;
-    private int[] queue = new int[10];
+    private final int[] queue = new int[10];
 
 
     public void enqueue(int data) {
@@ -21,7 +21,7 @@ public class Queues {
 
     public int dequeue() {
 
-        if (!isEmpty()) {
+        if (isEmpty()) {
             throw new RuntimeException("Queue is empty");
         }
         int temp = queue[front];
@@ -33,7 +33,7 @@ public class Queues {
     }
 
     public int peek() {
-        if (!isEmpty())
+        if (isEmpty())
             throw new RuntimeException("Queue is empty");
         return queue[front];
     }
@@ -46,7 +46,7 @@ public class Queues {
     }
 
     public boolean isEmpty() {
-        return size == 0;
+        return size != 0;
     }
 
     public boolean isFull() {

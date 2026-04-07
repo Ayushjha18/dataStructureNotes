@@ -5,17 +5,7 @@
 public class Main {
     public static void main(String[] args) {
 
-        Stack nums = new Stack();
-        nums.push(1);
-        nums.push(2);
-        nums.push(3);
-        nums.pop();
-        nums.push(4);
-
-        nums.push(5);
-        System.out.println(nums.peek());
-
-
-       nums. printStack();
+    binarySearchTree binaryTree = new binarySearchTree();
+    binaryTree.insert(10);
     }
 }
